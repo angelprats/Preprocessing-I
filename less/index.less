@@ -161,6 +161,7 @@ header {
 
   @media (max-width: 500px) {
     justify-content: center;
+    color: @navcolor;
   }
 }
 
@@ -189,6 +190,7 @@ h1 {
 
 @banana: gray;
 @navcolor: dodgerblue;
+@orange: orange;
 
 button {
   background: @banana;
@@ -201,6 +203,7 @@ button {
   @media (max-width: 500px) {
     font-size: 2rem;
     padding: 1rem;
+    background: @navcolor;
   }
 }
 
@@ -219,6 +222,12 @@ a {
   width: 44%;
   vertical-align: top;
   margin: 15px 0px;
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+  }
 }
 
 .listen {
