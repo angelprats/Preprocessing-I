@@ -134,17 +134,40 @@ table {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+@banana: gray;
+@navcolor: dodgerblue;
+@orange: orange;
+@buttoncolor: mediumpurple;
+@robotostack: 'Roboto Condensed', sans-serif;
+@font-color: royalblue;
+
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 html,
 body {
   height: 100%;
-
-  // background: red;
 }
 
 .container {
   max-width: 880px;
   margin: 0 auto;
+}
+
+.fonts() {
+  font-family: @robotostack;
+  color: @font-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  .fonts;
 }
 
 header {
@@ -165,16 +188,23 @@ header {
   }
 }
 
-img {
-  object-fit: cover;
-  width: 320px;
-  height: 180px;
-  padding: 0.2rem;
-  margin: 15px;
-}
-
 .top-content {
   background: lightgray;
+
+  p {
+    margin: 20px;
+
+    @media (max-width: 500px) {
+      font-size: 1.5rem;
+    }
+  }
+  img {
+    object-fit: cover;
+    width: 320px;
+    height: 180px;
+    padding: 0.2rem;
+    margin: 15px;
+  }
 
   h1 {
     font-size: 2.5rem;
@@ -187,9 +217,9 @@ img {
   }
 
   button {
-    background: @buttoncolor;
+    background: @font-color;
     margin: 20px;
-    padding: 1rem;
+    padding: 15px 1rem;
     border-radius: 5px;
     color: white;
     cursor: pointer;
@@ -198,18 +228,8 @@ img {
   @media (max-width: 500px) {
     font-size: 2rem;
     padding: 1rem;
-    background: @navcolor;
   }
 }
-
-@banana: gray;
-@navcolor: dodgerblue;
-@orange: orange;
-@buttoncolor: mediumpurple;
-
-// a {
-//   color: @navcolor;
-// }
 
 .mid-content {
   display: flex;
@@ -232,13 +252,18 @@ img {
   h3 {
     font-size: 1.5rem;
   }
-  @media (max-width: 500px) {
+
+  .center() {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    .center;
     margin: 10px 10px;
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -251,10 +276,34 @@ li:first-child {
   border-top: 1px solid gray;
 }
 
-.top-content p {
-  margin: 20px;
-
+.contact {
+  font-size: 1.1rem;
+  margin: 10px 0;
   @media (max-width: 500px) {
-    font-size: 1.5rem;
+    flex-direction: column;
+    .center;
+    margin: 10px 10px;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      .center;
+      margin: 10px 10px;
+    }
+  }
+}
+
+footer {
+  .center;
+  padding: 1.5rem;
+  border: 1px solid black;
+  background: @banana;
+
+  h5 {
+    color: white;
   }
 }

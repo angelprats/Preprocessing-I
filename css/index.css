@@ -139,6 +139,14 @@ body {
   max-width: 880px;
   margin: 0 auto;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: royalblue;
+}
 header {
   display: flex;
   justify-content: flex-end;
@@ -156,15 +164,23 @@ header nav a {
     color: dodgerblue;
   }
 }
-img {
+.top-content {
+  background: lightgray;
+}
+.top-content p {
+  margin: 20px;
+}
+@media (max-width: 500px) {
+  .top-content p {
+    font-size: 1.5rem;
+  }
+}
+.top-content img {
   object-fit: cover;
   width: 320px;
   height: 180px;
   padding: 0.2rem;
   margin: 15px;
-}
-.top-content {
-  background: lightgray;
 }
 .top-content h1 {
   font-size: 2.5rem;
@@ -176,9 +192,9 @@ img {
   margin-bottom: 20px;
 }
 .top-content button {
-  background: mediumpurple;
+  background: royalblue;
   margin: 20px;
-  padding: 1rem;
+  padding: 15px 1rem;
   border-radius: 5px;
   color: white;
   cursor: pointer;
@@ -187,7 +203,6 @@ img {
   .top-content {
     font-size: 2rem;
     padding: 1rem;
-    background: dodgerblue;
   }
 }
 .mid-content {
@@ -211,12 +226,12 @@ img {
 }
 @media (max-width: 500px) {
   .mid-content {
-    display: flex;
     flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px 10px;
-    width: 100%;
+    width: 90%;
   }
 }
 li {
@@ -226,11 +241,40 @@ li {
 li:first-child {
   border-top: 1px solid gray;
 }
-.top-content p {
-  margin: 20px;
+.contact {
+  font-size: 1.1rem;
+  margin: 10px 0;
 }
 @media (max-width: 500px) {
-  .top-content p {
-    font-size: 1.5rem;
+  .contact {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
   }
+}
+.contact h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+  .contact h4 {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  border: 1px solid black;
+  background: gray;
+}
+footer h5 {
+  color: white;
 }
