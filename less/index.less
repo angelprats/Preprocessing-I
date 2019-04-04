@@ -155,7 +155,7 @@ header {
 
   nav a {
     margin: 1rem;
-    color: @banana;
+    color: @navcolor;
     text-decoration: none;
   }
 
@@ -175,30 +175,25 @@ img {
 
 .top-content {
   background: lightgray;
-}
 
-h1 {
-  font-size: 2.5rem;
-  margin: 0 0.8rem;
-}
+  h1 {
+    font-size: 2.5rem;
+    margin: 0 0.8rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin: 1rem;
+    margin-bottom: 20px;
+  }
 
-.top-content h3 {
-  font-size: 1.5rem;
-  margin: 0.5rem;
-  margin-bottom: 20px;
-}
-
-@banana: gray;
-@navcolor: dodgerblue;
-@orange: orange;
-
-button {
-  background: @banana;
-  margin: 20px;
-  padding: 1rem;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
+  button {
+    background: @buttoncolor;
+    margin: 20px;
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
 
   @media (max-width: 500px) {
     font-size: 2rem;
@@ -207,9 +202,14 @@ button {
   }
 }
 
-a {
-  color: @navcolor;
-}
+@banana: gray;
+@navcolor: dodgerblue;
+@orange: orange;
+@buttoncolor: mediumpurple;
+
+// a {
+//   color: @navcolor;
+// }
 
 .mid-content {
   display: flex;
@@ -217,26 +217,29 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-}
-.mid-content .p-1 {
-  width: 44%;
-  vertical-align: top;
-  margin: 15px 0px;
 
+  .p-1 {
+    width: 44%;
+    vertical-align: top;
+    margin: 15px 0px;
+  }
+
+  .listen {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
   @media (max-width: 500px) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 10px 10px;
+    width: 100%;
   }
-}
-
-.listen {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.p-1 h3 {
-  font-size: 1.5rem;
 }
 
 li {

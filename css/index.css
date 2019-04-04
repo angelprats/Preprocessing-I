@@ -147,7 +147,7 @@ header {
 }
 header nav a {
   margin: 1rem;
-  color: gray;
+  color: dodgerblue;
   text-decoration: none;
 }
 @media (max-width: 500px) {
@@ -166,17 +166,17 @@ img {
 .top-content {
   background: lightgray;
 }
-h1 {
+.top-content h1 {
   font-size: 2.5rem;
   margin: 0 0.8rem;
 }
 .top-content h3 {
   font-size: 1.5rem;
-  margin: 0.5rem;
+  margin: 1rem;
   margin-bottom: 20px;
 }
-button {
-  background: gray;
+.top-content button {
+  background: mediumpurple;
   margin: 20px;
   padding: 1rem;
   border-radius: 5px;
@@ -184,14 +184,11 @@ button {
   cursor: pointer;
 }
 @media (max-width: 500px) {
-  button {
+  .top-content {
     font-size: 2rem;
     padding: 1rem;
     background: dodgerblue;
   }
-}
-a {
-  color: dodgerblue;
 }
 .mid-content {
   display: flex;
@@ -205,19 +202,22 @@ a {
   vertical-align: top;
   margin: 15px 0px;
 }
-@media (max-width: 500px) {
-  .mid-content .p-1 {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 10px;
-  }
-}
-.listen {
+.mid-content .listen {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
-.p-1 h3 {
+.mid-content h3 {
   font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  .mid-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    width: 100%;
+  }
 }
 li {
   border: 1px solid gray;
