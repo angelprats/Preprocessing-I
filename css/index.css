@@ -255,10 +255,14 @@ li:first-child {
   width: 100%;
   margin-top: 20px;
 }
+.table td {
+  border: 1px solid black;
+}
 .table th {
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
   justify-content: space-between;
+  border: 1px solid black;
 }
 @media (max-width: 500px) {
   .table th {

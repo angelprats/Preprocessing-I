@@ -180,12 +180,12 @@ header {
     margin: 1rem;
     color: @navcolor;
     text-decoration: none;
-  }
 
   @media (max-width: 500px) {
     justify-content: center;
     color: @navcolor;
   }
+ }
 }
 
 .top-content {
@@ -215,19 +215,19 @@ header {
     margin: 1rem;
     margin-bottom: 20px;
   }
+}
 
-  button {
-    background: @font-color;
-    margin: 20px;
-    padding: 15px 1rem;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+button {
+  background: @font-color;
+  margin: 20px;
+  padding: 15px 1rem;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
 
-    @media (max-width: 500px) {
-      font-size: 2rem;
-      padding: 1rem;
-    }
+  @media (max-width: 500px) {
+    font-size: 2rem;
+    padding: 1rem;
   }
 }
 
@@ -255,12 +255,20 @@ header {
 
     h3 {
       font-size: 1.5rem;
-    }
+    
 
-    .center() {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    li {
+      border: 1px solid gray;
+      padding: 0.5rem;
+    
+      @media (max-width: 500px) {
+        width: 100%;
+        .center;
+      }
+
+
+    li:first-child {
+      border-top: 1px solid gray;
     }
 
     @media (max-width: 500px) {
@@ -271,11 +279,12 @@ header {
     }
   }
 }
+  .center() {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-li {
-  border: 1px solid gray;
-  padding: 0.5rem;
-}
 
 li:first-child {
   border-top: 1px solid gray;
@@ -286,18 +295,19 @@ li:first-child {
   background: lightblue;
   width: 100%;
   margin-top: 20px;
-
-  th {
-    font-family: @robotostack;
-    display: flex;
-    justify-content: space-between;
+  font-family: @robotostack;
+  padding: 20px;
 
     @media (max-width: 500px) {
       flex-direction: column;
       margin: 10px 10px;
+      .center;
+      font-size: 1.5rem;
+    
     }
   }
-}
+  }
+  
 .contact {
   font-size: 1.1rem;
   margin: 10px 0;
