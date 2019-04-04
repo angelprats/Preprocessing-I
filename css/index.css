@@ -200,7 +200,7 @@ header nav a {
   cursor: pointer;
 }
 @media (max-width: 500px) {
-  .top-content {
+  .top-content button {
     font-size: 2rem;
     padding: 1rem;
   }
@@ -217,15 +217,23 @@ header nav a {
   vertical-align: top;
   margin: 15px 0px;
 }
-.mid-content .listen {
+@media (max-width: 500px) {
+  .mid-content .p-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.mid-content .p-1 .listen {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
-.mid-content h3 {
+.mid-content .p-1 h3 {
   font-size: 1.5rem;
 }
 @media (max-width: 500px) {
-  .mid-content {
+  .mid-content .p-1 {
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -240,6 +248,23 @@ li {
 }
 li:first-child {
   border-top: 1px solid gray;
+}
+.table {
+  border: 1px solid black;
+  background: lightblue;
+  width: 100%;
+  margin-top: 20px;
+}
+.table th {
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .table th {
+    flex-direction: column;
+    margin: 10px 10px;
+  }
 }
 .contact {
   font-size: 1.1rem;

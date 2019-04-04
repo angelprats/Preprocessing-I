@@ -223,11 +223,11 @@ header {
     border-radius: 5px;
     color: white;
     cursor: pointer;
-  }
 
-  @media (max-width: 500px) {
-    font-size: 2rem;
-    padding: 1rem;
+    @media (max-width: 500px) {
+      font-size: 2rem;
+      padding: 1rem;
+    }
   }
 }
 
@@ -242,28 +242,33 @@ header {
     width: 44%;
     vertical-align: top;
     margin: 15px 0px;
-  }
 
-  .listen {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
+    @media (max-width: 500px) {
+      width: 100%;
+      .center;
+    }
 
-  h3 {
-    font-size: 1.5rem;
-  }
+    .listen {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
 
-  .center() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    h3 {
+      font-size: 1.5rem;
+    }
 
-  @media (max-width: 500px) {
-    flex-direction: column;
-    .center;
-    margin: 10px 10px;
-    width: 90%;
+    .center() {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      .center;
+      margin: 10px 10px;
+      width: 90%;
+    }
   }
 }
 
@@ -276,9 +281,27 @@ li:first-child {
   border-top: 1px solid gray;
 }
 
+.table {
+  border: 1px solid black;
+  background: lightblue;
+  width: 100%;
+  margin-top: 20px;
+
+  th {
+    font-family: @robotostack;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      margin: 10px 10px;
+    }
+  }
+}
 .contact {
   font-size: 1.1rem;
   margin: 10px 0;
+
   @media (max-width: 500px) {
     flex-direction: column;
     .center;
@@ -296,7 +319,6 @@ li:first-child {
     }
   }
 }
-
 footer {
   .center;
   padding: 1.5rem;
